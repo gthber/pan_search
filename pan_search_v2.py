@@ -75,7 +75,7 @@ while True:
 					#print (site)
 				#全局搜索
 				else:
-					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&f-"+str(t2)+"/"+str(num)
+					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&nd-d&f-"+str(t2)+"/"+str(num)
 					#print (site)
 					
 					
