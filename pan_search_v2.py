@@ -54,7 +54,7 @@ while True:
 	except(EOFError):
 		key = str(pankey)
 	try:
-		t2 = "%20".join(t1[i+1:])
+		t2 = "%20".join(t1[i:])
 	except(EOFError):
 		t2 = ""
 		pass
@@ -66,12 +66,12 @@ while True:
 				d = [True for c in (t1[i:]) if c in tbook]
 				e = [True for c in (t1[i:]) if c in tvideo]
 				if d:					
-					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&s-vcnt1&f-"+str(t2)+"/"+str(num)
+					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&f-"+str(t2)+"/"+str(num)
 					#print (site)
 									
 				#影视资源搜索优化					
 				elif e:
-					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&s-size1&f-"+str(t2)+"/"+str(num)
+					site = "http://www.rufengso.net/s/comb/n-"+str(key).rstrip("%20")+"&f-"+str(t2)+"/"+str(num)
 					#print (site)
 				#全局搜索
 				else:
