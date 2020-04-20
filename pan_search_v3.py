@@ -56,7 +56,7 @@ while True:
 	if str(pankey) != "":
 		try:
 			for num in range(1,2):
-				#电子书搜索优化
+				#电影、电子书搜索优化
 				d = [True for c in t1 if c in tlist]
 				if d:					
 					site = "http://www.rufengso.net/s/comb/n-"+str(key).strip()+"&f-"+str(t2).strip()+"/"+str(num)					
