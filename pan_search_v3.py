@@ -20,9 +20,6 @@ pankey = ''
 
 tlist = ['txt','pdf','chm','epub','mobi','mp3','flac','ape','wav','mp4','mkv','rmvb','jpg','png','gif','psd','rar','zip','7z']
 
-tl = []
-pl = [] 
-
 
 def url_request(link):
 	hdr = {	'Host':'pdd.19mi.net',
@@ -61,7 +58,6 @@ except KeyboardInterrupt:
 while True:	
 	t1 = str(pankey).split(" ")
 	t2 = ""
-	i = 0
 	key = ""
 	for j in t1:
 		if j not in tlist:
@@ -100,15 +96,11 @@ while True:
 				i=1
 				while True:
 					try:		
-						print (str(bt_page.split("<div class=\"search-page\">")[1].split("<a target=\"_blank\" title=")[i].split("\"")[1]))
-						#tl.append(str(bt_page.split("<div class=\"search-page\">")[1].split("<a target=\"_blank\" title=")[i].split("\"")[1]))						
+						print (str(bt_page.split("<div class=\"search-page\">")[1].split("<a target=\"_blank\" title=")[i].split("\"")[1]))				
 						subhref = str(bt_page.split("<div class=\"search-page\">")[1].split("<a target=\"_blank\" title=")[i].split("href=")[1].split("\"")[1])
 						req2 = requests.get("http://www.rufengso.net"+str(subhref),headers=hdr)
 						bt_page2 = req2.text
 						print (str(bt_page2.split("class=\"dbutton2\"")[1].split("href=\"")[1].split("\"")[0])+"\n")
-						#li = str(bt_page2.split("class=\"dbutton2\"")[1].split("href=\"")[1].split("\"")[0])
-						#pl.append(str(url_request(li).split("var url = \"")[1].split("\"")[0]))
-						#print (link+"\n")
 						i += 1
 						
 						
