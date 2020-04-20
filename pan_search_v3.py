@@ -4,9 +4,6 @@ import requests
 import sys
 import os
 import signal
-import random
-import time
-
 
 def signal_handler(sig,frame):
 	sys.exit(0)
