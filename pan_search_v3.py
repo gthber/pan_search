@@ -20,20 +20,6 @@ pankey = ''
 
 tlist = ['txt','pdf','chm','epub','mobi','mp3','flac','ape','wav','mp4','mkv','rmvb','jpg','png','gif','psd','rar','zip','7z']
 
-
-def url_request(link):
-	hdr = {	'Host':'pdd.19mi.net',
-		'Connection': 'keep-alive',
-		'Upgrade-Insecure-Requests': '1',
-		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
-		'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-		'Accept-Encoding': 'gzip, deflate',
-		'Accept-Language': 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7'
-		}  
-	rs=requests.get(link,headers=hdr)
-	result = rs.text
-	return result
-
 def usage():
 	global tlist
 	print("支持多关键词和文件类型无序搜索")
@@ -71,7 +57,7 @@ while True:
 		try:
 			for num in range(1,2):
 				#电子书搜索优化
-				d = [True for c in (t1[i:]) if c in tlist]
+				d = [True for c in t1 if c in tlist]
 				if d:					
 					site = "http://www.rufengso.net/s/comb/n-"+str(key).strip()+"&f-"+str(t2).strip()+"/"+str(num)					
 					#print (site)
