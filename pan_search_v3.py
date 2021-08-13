@@ -11,7 +11,7 @@ signal.signal(signal.SIGINT,signal_handler)
 
 os.system('CHCP 65001')
 os.system('cls')
-os.system('title 网盘搜索引擎(panda1987cs@gmail.com)')
+os.system('title 网盘搜索引擎')
 os.system('color 0f')
 pankey = ''
 
